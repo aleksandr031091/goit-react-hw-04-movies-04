@@ -1,8 +1,20 @@
 import React, { Component } from "react";
 
+import { searchTrandMouve } from "../services/muvieApi";
+
 class HomePage extends Component {
-  state = {};
+  state = {
+    trandingMovie: [],
+  };
+
+  componentDidMount() {
+    searchTrandMouve().then(({ data }) =>
+      this.setState({ trandingMovie: data.results })
+    );
+  }
+
   render() {
+    console.log(this.state);
     return (
       <>
         <h2>HomePage</h2>

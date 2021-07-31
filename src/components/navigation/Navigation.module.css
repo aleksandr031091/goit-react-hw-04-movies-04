@@ -1,0 +1,15 @@
+.navList {
+  display: flex;
+  text-align: center;
+}
+.navItem {
+  padding: 10px;
+}
+.navItem:not(:last-child) {
+  margin-left: 10px;
+}
+.navLink {
+  font-size: 30px;
+  font-weight: 700;
+  color: aqua;
+}
