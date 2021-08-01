@@ -1,7 +1,6 @@
 import React from "react";
 import { Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
-
 import { routes } from "../../route/mainRoutes";
 
 const Main = () => {

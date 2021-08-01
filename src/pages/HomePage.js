@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 import { searchTrandMouve } from "../services/muvieApi";
 
 class HomePage extends Component {
@@ -17,13 +17,14 @@ class HomePage extends Component {
     console.log(this.state);
     return (
       <>
-        <h2>HomePage</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quia
-          quisquam. Molestiae eveniet, facere beatae saepe voluptatibus velit
-          nisi, nesciunt nemo laudantium quas consectetur earum ipsum voluptate
-          quam cumque dolores.
-        </p>
+        <h1>Trending today</h1>
+        <ul>
+          {this.state.trandingMovie.map((movie) => (
+            <li key={movie.id}>
+              <Link to={{}}>{movie.title}</Link>
+            </li>
+          ))}
+        </ul>
       </>
     );
   }
