@@ -19,7 +19,7 @@ class SearchBar extends Component {
     return (
       <>
         <form onSubmit={this.handleSubmit}>
-          {/* <button></button> */}
+          <button></button>
           <input
             type="text"
             value={this.state.query}

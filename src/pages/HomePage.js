@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { searchTrandMouve } from "../services/muvieApi";
+import { routes } from "../route/mainRoutes";
 
 class HomePage extends Component {
   state = {
@@ -21,7 +22,14 @@ class HomePage extends Component {
         <ul>
           {this.state.trandingMovie.map((movie) => (
             <li key={movie.id}>
-              <Link to={{}}>{movie.title}</Link>
+              <Link
+                to={{
+                  pathname: `/moviePage/${movie.id}`,
+                  state: { from: this.props.location },
+                }}
+              >
+                {movie.title}
+              </Link>
             </li>
           ))}
         </ul>

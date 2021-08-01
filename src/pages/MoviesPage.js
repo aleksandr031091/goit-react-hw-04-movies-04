@@ -1,22 +1,28 @@
 import React, { Component } from "react";
 import SearchBar from "../components/searchBar/SearchBar";
+import MoviesList from "../components/moviesList/MoviesList";
+import { searchMovies } from "../services/muvieApi";
 
 class MoviesPage extends Component {
   state = {
-    movie: "",
+    searchQuery: "",
+    movies: [],
   };
 
-  onChangeQuery = (query) => {
-    // this.setState({ movie: query });
-    console.log(query);
+  handleSubmit = (query) => {
+    searchMovies(query).then(({ data }) =>
+      this.setState({ movies: data.results })
+    );
+
+    // console.log(query);
   };
 
   render() {
+    console.log(this.state.movies);
     return (
       <>
-        <SearchBar onSubmit={this.onChangeQuery} />
-        <button>Go back</button>
-        <h2>MoviesPage</h2>
+        <SearchBar onSubmit={this.handleSubmit} />
+        <MoviesList movies={this.state.movies} />
       </>
     );
   }
