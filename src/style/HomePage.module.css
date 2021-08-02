@@ -1,0 +1,18 @@
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: blue;
+}
+.movieList {
+  padding: 20px;
+}
+.movieListItem {
+  font-weight: 700;
+}
+.movieListItem:not(:last-child) {
+  margin-bottom: 10px;
+}
+.movieListItemLink {
+  color: blueviolet;
+}

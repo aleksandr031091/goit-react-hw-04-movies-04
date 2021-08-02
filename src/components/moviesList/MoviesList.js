@@ -1,15 +1,17 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import css from "./Movies.list.module.css";
 
-const MovieList = ({ movies, match, location }) => {
+const MovieList = ({ movies, match, location, query }) => {
   return (
-    <ul>
+    <ul className={css.movieList}>
       {movies.map((movie) => (
-        <li key={movie.id}>
+        <li className={css.movieListItem} key={movie.id}>
           <Link
+            className={css.movieListItemLink}
             to={{
               pathname: `${match.url}/${movie.id}`,
-              state: { from: location },
+              state: { from: location.pathname, query },
             }}
           >
             {movie.title}

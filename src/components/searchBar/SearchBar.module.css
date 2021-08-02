@@ -1,0 +1,20 @@
+.form {
+  padding: 20px;
+}
+.button {
+  margin-right: 10px;
+  padding: 10px;
+  font-weight: 700;
+  border-radius: 5px;
+  background: transparent;
+  border-color: aqua;
+}
+.input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  font-weight: 700;
+  background: transparent;
+  border-color: aqua;
+  outline: none;
+}

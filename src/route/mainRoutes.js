@@ -7,15 +7,10 @@ export const routes = [
     exact: true,
     component: lazy(() => import("../pages/HomePage")),
   },
-  {
-    name: "movieDatailsPage",
-    path: "/movieDatailsPage",
-    exact: true,
-    component: lazy(() => import("../pages/MovieDetailsPage")),
-  },
+
   {
     name: "moviePage",
-    path: "/moviePage",
+    path: "/movie",
     exact: true,
     component: lazy(() => import("../pages/MoviesPage")),
   },

@@ -30,8 +30,18 @@ export const searchMovies = async (query) => {
 
 export const searchMouvesDetails = async (id) => {
   try {
+    return await axios.get(`movie/${id}?api_key=${KEY}`).then((response) => {
+      return response;
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const searchMovieCredits = async (id) => {
+  try {
     return await axios
-      .get(`search/movie/${id}?api_key=${KEY}`)
+      .get(`movie/${id}/credits?api_key=${KEY}`)
       .then((response) => {
         return response;
       });
@@ -39,3 +49,18 @@ export const searchMouvesDetails = async (id) => {
     console.log(error);
   }
 };
+
+export const searchMovieReviews = async (id) => {
+  try {
+    return await axios
+      .get(`movie/${id}/reviews?api_key=${KEY}`)
+      .then((response) => {
+        return response;
+      });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const posterimgpath = `https://image.tmdb.org/t/p/w342/`;
+export const profilepath = "https://image.tmdb.org/t/p/w185";

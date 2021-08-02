@@ -1,0 +1,12 @@
+.movieList {
+  padding: 20px;
+}
+.movieListItem {
+  font-weight: 700;
+}
+.movieListItem:not(:last-child) {
+  margin-bottom: 10px;
+}
+.movieListItemLink {
+  color: blueviolet;
+}

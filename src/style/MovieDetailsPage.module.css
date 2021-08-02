@@ -1,0 +1,21 @@
+.movieDetailsContainer {
+  padding: 20px;
+}
+.button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-weight: 700;
+  border-radius: 5px;
+  background: transparent;
+  border-color: aqua;
+}
+.navLink {
+  margin-right: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  color: blueviolet;
+}
+.activeNavLink {
+  color: yellowgreen;
+}
