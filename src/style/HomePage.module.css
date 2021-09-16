@@ -5,6 +5,8 @@
   color: blue;
 }
 .movieList {
+  /* display: flex;
+  flex-wrap: wrap; */
   padding: 20px;
 }
 .movieListItem {
@@ -15,4 +17,8 @@
 }
 .movieListItemLink {
   color: blueviolet;
+}
+.posterImg {
+  width: 200px;
+  margin-bottom: 10px;
 }
