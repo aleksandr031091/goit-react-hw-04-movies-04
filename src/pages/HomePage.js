@@ -34,7 +34,9 @@ class HomePage extends Component {
                   state: { from: this.props.location.pathname },
                 }}
               >
-                {movie.title}
+                {movie.title.length > 20
+                  ? movie.title.substr(0, 20) + "..."
+                  : movie.title}
               </Link>
             </li>
           ))}

@@ -5,12 +5,13 @@
   color: blue;
 }
 .movieList {
-  /* display: flex;
-  flex-wrap: wrap; */
+  display: flex;
+  flex-wrap: wrap;
   padding: 20px;
 }
 .movieListItem {
   font-weight: 700;
+  margin-right: 10px;
 }
 .movieListItem:not(:last-child) {
   margin-bottom: 10px;
