@@ -7,19 +7,22 @@
 .movieList {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-right: -10px;
+  margin-bottom: -20px;
   padding: 20px;
 }
 .movieListItem {
   font-weight: 700;
+  width: calc((100% / 7) - 10px);
   margin-right: 10px;
+  margin-bottom: 20px;
 }
-.movieListItem:not(:last-child) {
-  margin-bottom: 10px;
-}
+
 .movieListItemLink {
   color: blueviolet;
 }
 .posterImg {
-  width: 200px;
+  width: 100%;
   margin-bottom: 10px;
 }
